@@ -6,3 +6,4 @@ libraryDependencies ++= Seq(
   "org.webjars" % "mkdirp" % "0.5.0"
 )
 addSbtJsEngine("1.2.3")
+bintrayOrganization := None
