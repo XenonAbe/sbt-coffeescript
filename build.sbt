@@ -1,6 +1,6 @@
 // forked from sbt/sbt-coffeescript https://github.com/sbt/sbt-coffeescript
+name := "sbt-coffeescript2"
 ThisBuild / organization := "com.github.xenonabe"
-ThisBuild / name := "sbt-coffeescript2"
 ThisBuild / scalaVersion := "2.12.13"
 
 lazy val root = (project in file("."))
@@ -10,5 +10,8 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "org.webjars.npm" % "coffeescript" % "2.3.2",
       "org.webjars" % "mkdirp" % "0.5.0"
-    )
+    ),
+    publishArtifact in (Compile, packageDoc) := false,
+    publishArtifact in (Compile, packageSrc) := false,
+    bintrayRepository := "sbt-plugin-releases",
   )
