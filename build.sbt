@@ -11,6 +11,9 @@ lazy val root = (project in file("."))
       "org.webjars.npm" % "coffeescript" % "2.3.2",
       "org.webjars" % "mkdirp" % "0.5.0"
     ),
+    scriptedLaunchOpts := { scriptedLaunchOpts.value ++
+      Seq("-Dplugin.version=" + version.value)
+    },
     publishArtifact in (Compile, packageDoc) := false,
     publishArtifact in (Compile, packageSrc) := false,
     bintrayRepository := "sbt-plugin-releases",
