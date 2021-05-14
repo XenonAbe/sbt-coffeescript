@@ -8,7 +8,7 @@ lazy val root = (project in file("."))
   .settings(
     addSbtJsEngine("1.2.3"),
     libraryDependencies ++= Seq(
-      "org.webjars.npm" % "coffeescript" % "2.3.2",
+      "org.webjars.npm" % "coffeescript" % "2.5.1",
       "org.webjars" % "mkdirp" % "0.5.0"
     ),
     scriptedLaunchOpts := { scriptedLaunchOpts.value ++
